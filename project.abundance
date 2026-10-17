@@ -1,13 +1,135 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-1",
-    "name": "tutorial-default",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-1",
+  "name": "tutorial-default",
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Extrude",
+      "x": 0.4,
+      "y": 0.6,
+      "uniqueID": "id-12",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 20,
+          "currentEquation": "20"
+        }
+      ]
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.5,
+      "y": 0.2,
+      "uniqueID": "id-16",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.5,
+      "y": 0.5,
+      "uniqueID": "id-19",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 50,
+          "currentEquation": "50"
+        }
+      ]
+    },
+    {
+      "atomType": "Output",
+      "x": 1,
+      "y": 0.5,
+      "uniqueID": "id-2",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.5,
+      "y": 0.9,
+      "uniqueID": "id-23",
+      "ioValues": [
+        {
+          "name": "makeDisjoint",
+          "ioValue": true
+        },
+        {
+          "name": "Shape 1",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape2",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape3",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.3,
+      "y": 0.5,
+      "uniqueID": "id-8",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 20,
+          "currentEquation": "20"
+        },
+        {
+          "name": "y length",
+          "ioValue": 30,
+          "currentEquation": "30"
+        }
+      ]
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-12",
+      "ap2ID": "id-23"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-16",
+      "ap2ID": "id-19"
+    },
+    {
+      "ap2Name": "Shape2",
+      "ap1ID": "id-19",
+      "ap2ID": "id-23"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-8",
+      "ap2ID": "id-12"
+    }
+  ],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
